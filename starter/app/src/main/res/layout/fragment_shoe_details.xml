@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shoeViewModel"
+            type="com.udacity.shoestore.ui.ShoesViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/candy_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:src="@drawable/ic_sweet"
+                android:tint="@color/colorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shoe_name_label"
+                style="@style/EditTextTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@string/shoe_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/candy_image" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/shoe_name_field"
+                style="@style/EditTextFieldStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_small"
+                android:text="@={shoeViewModel.shoeName}"
+                app:layout_constraintEnd_toEndOf="@id/shoe_name_label"
+                app:layout_constraintStart_toStartOf="@id/shoe_name_label"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_name_label" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/company_label"
+                style="@style/EditTextTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_regular"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@string/company"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shoe_name_field" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/company_field"
+                style="@style/EditTextFieldStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@={shoeViewModel.shoeCompany}"
+                android:layout_marginTop="@dimen/margin_x_small"
+                app:layout_constraintEnd_toEndOf="@id/company_label"
+                app:layout_constraintStart_toStartOf="@id/company_label"
+                app:layout_constraintTop_toBottomOf="@+id/company_label" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/shoe_size_label"
+                style="@style/EditTextTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_regular"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@string/shoe_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/company_field" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/shoe_size_field"
+                style="@style/EditTextFieldStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="@={shoeViewModel.shoeSize}"
+                android:layout_marginTop="@dimen/margin_x_small"
+                android:digits="0123456789."
+                app:layout_constraintEnd_toEndOf="@id/shoe_size_label"
+                app:layout_constraintStart_toStartOf="@id/shoe_size_label"
+                app:layout_constraintTop_toBottomOf="@+id/shoe_size_label" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description_label"
+                style="@style/EditTextTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_regular"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:text="@string/description"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shoe_size_field" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/description_field"
+                style="@style/EditTextFieldStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_small"
+                android:text="@={shoeViewModel.shoeDescription}"
+                app:layout_constraintEnd_toEndOf="@id/description_label"
+                app:layout_constraintStart_toStartOf="@id/description_label"
+                app:layout_constraintTop_toBottomOf="@+id/description_label" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_large"
+                android:layout_marginBottom="@dimen/margin_x_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:background="@drawable/background_primary_rounded"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:onClick="@{_->shoeViewModel.saveShoe()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cancel_button"
+                app:layout_constraintTop_toBottomOf="@id/description_field"
+                app:layout_constraintVertical_bias="0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_x_large"
+                android:layout_marginBottom="@dimen/margin_x_large"
+                android:layout_marginStart="@dimen/margin_large"
+                android:background="@drawable/background_secondary_rounded"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:onClick="@{_->shoeViewModel.cancel()}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/save_button"
+                app:layout_constraintTop_toBottomOf="@id/description_field"
+                app:layout_constraintVertical_bias="0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</layout>

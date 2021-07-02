@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="store_name">Dulce\nShoe Store</string>
+    <string name="email">Email</string>
+    <string name="email_hint">Insert your email</string>
+    <string name="password">Password</string>
+    <string name="password_hint">Insert your password</string>
+    <string name="already_have_login">Already Have Login</string>
+    <string name="create_a_login">Create a Login</string>
+    <string name="welcome_text">This is Dulce Shoe Store and we are happy to have you as our client!\n\n\nPlease take a minute to read the instructions and then enjoy our items!</string>
+    <string name="welcome">Welcome!</string>
+    <string name="instructions">Instructions</string>
+    <string name="instructions_text_1">1) In the Shoe List you will be able all the shoes you\'ve added to your list.</string>
+    <string name="instructions_text_2">2) By clicking in the "+" button in the shoe list you will be able to navigate to the Shoe Details screen and you will be able to insert a new shoe into your list.</string>
+    <string name="instructions_text_3">3) In the Shoe Details screen please inset all the needed information about your desired shoe. Then click "Save" to save this shoe and see it on the list or "Cancel" to cancel this action and navigate back to the Shoe List screen.</string>
+    <string name="cd_add_shoe">Add new shoe</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="description">Description</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="company">Company</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_item">Shoe Name: %s\nCompany: %s\nShoe Size: %.2f\nDescription: %s</string>
+    <string name="logout">Logout</string>
 </resources>
